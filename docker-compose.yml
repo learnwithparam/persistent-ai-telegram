@@ -1,0 +1,10 @@
+services:
+  bot:
+    build: .
+    container_name: persistent-ai-telegram
+    volumes:
+      - .:/app
+      - /app/.venv
+    env_file:
+      - .env
+    restart: unless-stopped

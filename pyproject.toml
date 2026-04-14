@@ -1,0 +1,21 @@
+[project]
+name = "persistent-ai-telegram"
+version = "0.1.0"
+description = "Building Persistent AI Assistants with Telegram - Workshop by learnwithparam.com"
+readme = "README.md"
+authors = [{ name = "Param Harrison", email = "param@learnwithparam.com" }]
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.40.0",
+    "python-telegram-bot>=21.0",
+    "flask>=3.0.0",
+    "schedule>=1.2.0",
+    "python-dotenv>=1.0.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

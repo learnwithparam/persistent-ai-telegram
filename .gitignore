@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+
+# Environment
+.env
+.venv
+.uv/
+env/
+venv/
+
+# Workshop artifacts
+sessions/
+memory/
+exec-approvals.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Lock file (auto-generated)
+uv.lock
