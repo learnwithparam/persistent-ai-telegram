@@ -1,11 +1,24 @@
-.PHONY: help install 01-simplest-bot 02-persistent-sessions 03-personality-soul 04-tools-agent-loop 05-permission-controls 06-gateway 07-context-compaction 08-long-term-memory 09-concurrency-scheduling 10-multi-agent-integration test clean
+.PHONY: help setup dev install 01-simplest-bot 02-persistent-sessions 03-personality-soul 04-tools-agent-loop 05-permission-controls 06-gateway 07-context-compaction 08-long-term-memory 09-concurrency-scheduling 10-multi-agent-integration test clean
 
 help: ## Show this help message
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
+setup: ## Initial setup (install deps, create .env)
+	@if [ ! -f .env ]; then \
+		echo "Creating .env..."; \
+		cp .env.example .env; \
+		echo "✓ .env created — edit it with your ANTHROPIC_API_KEY and TELEGRAM_BOT_TOKEN"; \
+	else \
+		echo ".env already exists"; \
+	fi
+	@uv sync
+	@echo "✓ Ready! Run 'make dev' to start the first module"
+
 install: ## Install dependencies using uv
 	@echo "Installing dependencies..."
 	@uv sync
+
+dev: setup run ## Setup and run the first module (one command to start!)
 
 run: 01-simplest-bot ## Run the first module - start here!
 
