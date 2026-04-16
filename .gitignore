@@ -34,3 +34,18 @@ Thumbs.db
 
 # Lock file (auto-generated)
 uv.lock
+
+# Standardized additions (appended by project setup)
+.venv/
+ENV/
+.env.local
+.env.*.local
+node_modules/
+.next/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
