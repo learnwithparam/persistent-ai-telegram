@@ -166,8 +166,8 @@ Load history, call the API, save the response. Everything else is refinement.
 make test    # Runs automated checks on all modules
 ```
 
-## About
+## Learn more
 
-Created by [learnwithparam.com](https://learnwithparam.com) - Learn AI Engineering through hands-on projects.
-
-Explore more courses at [learnwithparam.com/courses](https://learnwithparam.com/courses).
+- Start the course: [learnwithparam.com/courses/persistent-ai-assistants](https://www.learnwithparam.com/courses/persistent-ai-assistants)
+- AI Bootcamp for Software Engineers: [learnwithparam.com/ai-bootcamp](https://www.learnwithparam.com/ai-bootcamp)
+- All courses: [learnwithparam.com/courses](https://www.learnwithparam.com/courses)
